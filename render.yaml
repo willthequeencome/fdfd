@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: science project
+    env: node
+    buildCommand: npm install fastify
+    startCommand: npm start
