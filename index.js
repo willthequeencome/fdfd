@@ -7,6 +7,6 @@ server.register(require("@fastify/http-proxy"), {
 	http2: false,
 });
 
-server.listen({ host: "0.0.0.0", port: 3000 }, () => {
-	console.log("shuttle-lite is listening on port 3000");
+server.listen({ host: "0.0.0.0", port: 8000 }, () => {
+	console.log("listening on port 8000");
 });
