@@ -3,4 +3,4 @@ services:
     name: science project
     env: node
     buildCommand: npm install fastify
-    startCommand: npm start
+    startCommand: node index.js
