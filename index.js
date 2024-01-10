@@ -2,7 +2,7 @@ const Fastify = require("fastify");
 const server = Fastify();
 
 server.register(require("@fastify/http-proxy"), {
-	upstream: "https://worker-holy-star-fec9.alappan077.workers.dev",
+	upstream: "https://worker-patient-field-817c.alappan077.workers.dev",
 	prefix: "/",
 	http2: false,
 });
