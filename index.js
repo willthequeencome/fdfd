@@ -1,30 +1,25 @@
 const Fastify = require("fastify");
 const server = Fastify();
 
-
-server.register(require('@fastify/cors'), (instance) => {
-  return (req, callback) => {
-    const corsOptions = {
-      // This is NOT recommended for production as it enables reflection exploits
-      origin: true
-    };
-
-    // do not include CORS headers for requests from localhost
-    if (/^localhost$/m.test(req.headers.origin)) {
-      corsOptions.origin = false
+server.register(require('@fastify/cors'), {
+  // Enable CORS for all origins except localhost
+  origin: (origin, cb) => {
+    if (/^localhost$/m.test(origin)) {
+      // Do not include CORS headers for requests from localhost
+      cb(null, false);
+    } else {
+      // Enable CORS for other origins
+      cb(null, true);
     }
-
-    // callback expects two parameters: error and options
-    callback(null, corsOptions)
   }
-})
+});
 
 server.register(require("@fastify/http-proxy"), {
-	upstream: "https://api.shuttleai.app",
-	prefix: "/",
-	http2: false,
+  upstream: "https://api.shuttleai.app",
+  prefix: "/",
+  http2: false,
 });
 
 server.listen({ host: "0.0.0.0", port: 8000 }, () => {
-	console.log("listening on port 8000");
+  console.log("listening on port 8000");
 });
