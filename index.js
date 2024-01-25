@@ -15,7 +15,7 @@ server.register(require('@fastify/cors'), {
 });
 
 server.register(require("@fastify/http-proxy"), {
-  upstream: "https://api.shuttleai.app",
+  upstream: "https://talkai.info",
   prefix: "/",
   http2: false,
 });
