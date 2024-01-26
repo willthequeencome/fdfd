@@ -3,7 +3,7 @@ const server = Fastify();
 
 
 server.register(require("@fastify/http-proxy"), {
-  upstream: "https://talkai.info",
+  upstream: "https://wowzers2.netlify.app",
   prefix: "/",
   http2: false,
 });
