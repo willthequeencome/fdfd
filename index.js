@@ -3,7 +3,7 @@ const server = Fastify();
 
 
 server.register(require("@fastify/http-proxy"), {
-  upstream: "https://wowzers2.netlify.app",
+  upstream: "https://math.jdx3.org",
   prefix: "/",
   http2: false,
 });
