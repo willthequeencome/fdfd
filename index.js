@@ -3,7 +3,7 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 
 const app = express();
 
-// Define the target URL
+
 const target = 'http://math.jdx3.org';
 
 // Create the proxy middleware
