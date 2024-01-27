@@ -4,7 +4,7 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 const app = express();
 
 
-const target = 'http://math.jdx3.org';
+const target = 'https://wowzers2.netlify.app';
 
 // Create the proxy middleware
 const mathProxy = createProxyMiddleware({
