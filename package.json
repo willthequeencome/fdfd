@@ -9,8 +9,4 @@
   "keywords": [],
   "author": "",
   "license": "ISC", 
-  "dependencies": { 
-    "@fastify/http-proxy": "^9.3.0",
-    "fastify": "^4.24.3"
-  }
 }
