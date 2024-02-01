@@ -3,13 +3,13 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 
 const app = express();
 
-const target = 'https://wowzers2.netlify.app';
+const wowzersTarget = 'https://wowzers2.netlify.app';
 const oldTarget = 'https://hello-world-restless-hat-0190.alappan077.workers.dev';
 
-// Create the proxy middleware for main target
-const mainProxy = createProxyMiddleware({
-  target,
-  changeOrigin: true, // Needed for virtual hosted sites
+// Create the proxy middleware for wowzers2
+const wowzersProxy = createProxyMiddleware({
+  target: wowzersTarget,
+  changeOrigin: true,
   logLevel: 'debug',
 });
 
@@ -44,7 +44,7 @@ const oldV2Proxy = createProxyMiddleware({
 });
 
 // Use the proxy middleware for all requests
-app.use('/', mainProxy);
+app.use('/', wowzersProxy);
 app.use('/old/', oldProxy);
 app.use('/old/v1/', oldV1Proxy);
 app.use('/old/v2/', oldV2Proxy);
