@@ -5,7 +5,7 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 const app = express();
 
 
-const target = 'https://wowzers2.netlify.app';
+const target = 'http://108.56.245.80:8096';
 
 // Create the proxy middleware
 const mathProxy = createProxyMiddleware({
