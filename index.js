@@ -5,7 +5,7 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 const app = express();
 
 
-const target = 'http://108.56.245.80:8096';
+const target = 'https://websitesball.com';
 
 // Create the proxy middleware
 const mathProxy = createProxyMiddleware({
