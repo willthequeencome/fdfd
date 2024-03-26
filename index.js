@@ -5,7 +5,7 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 const app = express();
 
 
-const target = 'https://bgs.pages.dev';
+const target = 'https://www.blackbox.ai/';
 
 // Create the proxy middleware
 const mathProxy = createProxyMiddleware({
