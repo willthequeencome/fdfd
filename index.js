@@ -5,7 +5,7 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 const app = express();
 
 
-const target = 'https://websitesball.com';
+const target = 'https://unblocked-games.s3.amazonaws.com';
 
 // Create the proxy middleware
 const mathProxy = createProxyMiddleware({
