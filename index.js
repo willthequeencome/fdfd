@@ -5,7 +5,7 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 const app = express();
 
 
-const target = 'https://artclass.site/';
+const target = 'https://kazwire.com/';
 
 // Create the proxy middleware
 const mathProxy = createProxyMiddleware({
